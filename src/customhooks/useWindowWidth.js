@@ -3,6 +3,8 @@ import {useEffect,useState} from "react";
 
 const useWindowWidth = ()=>{
    const[width,setwidth] = useState(false);
+   console.log("wiiiiidttthhh : ",width);
+
    useEffect(()=>{
      checkWindowWidth();
      window.addEventListener('resize',checkWindowWidth);

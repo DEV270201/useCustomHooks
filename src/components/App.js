@@ -1,4 +1,6 @@
 // import WindowWidth from "./WindowWidth";
+import Counter from "./Counter";
+import React,{useEffect,useState} from "react";
 // import ClipboardCopy from "./ClipboardCopy";
 // import {useRef} from "react";
 // import ChildRef from "./ChildRef";
@@ -7,9 +9,11 @@
 function App() {
   // ref that is forwarded to the child component
   // const txt_ref = useRef(null);
+
   return (
     <div className="App">
       {/* <WindowWidth /> */}
+      <Counter />
       {/* <ClipboardCopy /> */}
       {/* ----- */}
       {/* forwarding refs */}
