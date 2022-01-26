@@ -2,6 +2,8 @@
 
 # my files
 /src/data.js
+/src/components/ChildRef.js
+/src/components/tp.js
 
 # dependencies
 /node_modules

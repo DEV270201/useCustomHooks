@@ -1,29 +1,26 @@
 import { useEffect, useState } from "react";
 //custom hook for copying data into the clipboard
+//The Clipboard API provides the ability to respond to clipboard commands (cut, copy, and paste) as well as to asynchronously read from and write to the system clipboard.
 
 const useClipboardCopy = () => {
     const [copied, setCopied] = useState(false);
-    //    const textRef = useRef();
 
     useEffect(() => {
         console.log("Trying to copy the data into the clipboard");
     }, []);
 
-    const copy_to_clipboard = async (ref) => {
+    const copy_to_clipboard = async (val) => {
         try {
-            if (ref.current == null) {
-                throw "Null Html element is passed!!";
-            }
             //copying to clipboard using clipboard API is asynchronous
             const cb = navigator.clipboard;
-            // await cb.writeText(document.querySelector(".custom_textarea").innerHTML);
-            await cb.writeText(ref.current.value);
+            await cb.writeText(val);
             setCopied(true);
             setTimeout(() => {
                 setCopied(false);
             }, 3000);
         } catch (err) {
             console.log("Err : ", err);
+            return;
         }
     }
 
