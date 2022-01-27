@@ -1,0 +1,56 @@
+.loader{
+    height: 90px;
+    width : 90px;
+    color : white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left : 90%;
+    top : 30%;
+    opacity: 100;
+    animation: changeColor 4s infinite ease;
+    transition: transform 2s ease-in-out;
+    /* border: 2px solid whitesmoke; */
+}
+
+.loader:hover{
+    cursor: pointer;
+
+    animation: changeColor 4s infinite ease , vibrate .1s infinite alternate;
+}
+
+@keyframes changeColor {
+    0%{
+        background-image: linear-gradient(180deg, #cc2b5e , #753a88);
+    }
+    25%{
+        background-image: linear-gradient(180deg, #42275a, #734b6d);
+    }
+    50%{
+        background-image: linear-gradient(180deg, #614385, #516395);
+    }
+    75%{
+        background-image: linear-gradient(180deg, #000428, #004e92);
+    }
+    100%{
+        background-image: linear-gradient(180deg, #cc2b5e, #753a88);
+    }
+}
+
+
+@keyframes vibrate {
+    from{
+        transform: translateX(-5px);
+    }
+    to{
+        transform: translateX(5px);
+    }
+}
+
+.p{
+    font-weight: 300;
+    font-style: oblique;
+}
+
